@@ -1,0 +1,289 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 250px 6fr;
+    grid-template-rows: 1fr 7fr;
+    height: 100vh;
+  }
+
+  .menu{
+    grid-column: 2/3;
+    background-color: #f8fbff;
+
+  }
+  .sidebar{
+    grid-row: 1/3;
+    background-color: #0e95d3;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+  }
+    .sidebar-logo{
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0 10px;
+    }
+    .logo-text{
+        color: #f8fbff;
+        font-size: 2rem;
+    }
+    .main , .settings{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+        .icon{
+            margin-left: 25px;
+            margin-right: 23px;
+        }
+        .text{
+          font-size: 1.1rem;
+        }
+        
+  .articles{
+    grid-row: 2;
+    grid-column: 2;
+    background-color: #cbd5e1b9;
+  }
+  .menu-item{
+    display: flex;
+  }
+.top{
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+.searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 50px;
+}
+  .btn{
+    border: none;
+    background-color: #f8fbff;
+  }
+  #site-search{
+    border: none;
+    background-color: #cbd5e1b9 ;
+    border-radius: 10px;
+    height: 30px;
+    width: 600px;
+    margin-right: auto;
+  }
+.note{
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  gap: 25px;
+}
+.imgCont{
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+}
+.pika{
+  border-radius: 50px;
+}
+.bot{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  box-shadow: 0 5px 5px rgb(159, 159, 159);
+}
+.imgContBot{
+  width: 80px;
+  height: 80px;
+  margin-left: 50px;
+  min-width: 80px;
+}
+.btnContainer{
+  display: flex;
+  gap: 25px;
+  margin-left: 35%;
+
+}
+.btnMenu{
+  background-color: #0e95d3;
+  color:#f8fbff;
+  border-radius: 20px;
+  border: none;
+  width: 125px;
+  height: 50px;
+}
+.nickName{
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#topNick{
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+#hi{
+  font-size: 1rem;
+}
+#botNick{
+  font-size: 1.6rem;
+}
+.sloganCont{
+  margin: 25px;
+}
+#notf{
+  min-width: 50px;
+}
+.articCont{
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-template-rows: 6% 45% 6% 43%;
+}
+.header{
+  background-color: #bccbde;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding: 20px 0 0 20px;
+}
+  #announcements{
+    padding-left: 5px;
+  }
+#trending{
+  grid-row: 3;
+  grid-column: 2;
+}
+.article {
+  grid-row: 2/6;
+  background-color: #bccbde;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.article p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.article .card {
+  background-color: #f8fbff;
+  color: black;
+  text-align: center;
+  height: 200px;
+  border-left: orange solid 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+.announcCont{
+  background-color: #bccbde;
+  padding-top: 20px;
+  grid-row: 2/3;
+}
+  .announc{
+    background-color: #f8fbff;
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 25px;
+
+  }
+.trendingCont{
+  background-color: #bccbde;
+}
+  .trending{
+    width: 80%;
+    height: 90%;
+    background-color: #f8fbff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 20px;
+    gap: 20px;
+  }
+.hr{
+  margin: 15px;
+  padding: 0;
+}
+.announc .title{
+  font-weight: 800;
+  font-size: 14px;
+}
+.userName{
+  font-size: 14px;
+  font-family: sans-serif;
+}
